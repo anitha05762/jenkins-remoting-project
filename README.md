@@ -1,70 +1,76 @@
-Jenkins Remoting layer
-====
+# Jenkins Remoting Project 🚀
 
-[![GitHub release](https://img.shields.io/github/release/jenkinsci/remoting.svg?label=changelog)](https://github.com/jenkinsci/remoting/releases/latest)
-[![Join the chat at https://gitter.im/jenkinsci/remoting](https://badges.gitter.im/jenkinsci/remoting.svg)](https://gitter.im/jenkinsci/remoting?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+A hands-on DevOps mini-project where I successfully configured and connected a Jenkins Remoting Agent to a Jenkins controller (master) using inbound communication.
 
-Jenkins remoting is an executable JAR, 
-which implements communication layer in [Jenkins](https://jenkins.io) automation server. 
-It's being used for controller <=> agent and controller <=> CLI communications.
+---
 
-In general, this library contains the bootstrap code to bridge separate JVMs into a single semi-shared space.
-It includes: TCP-based communication protocols, data serialization, Java classloading.
+## 📌 Project Objective
 
-The library is reusable outside Jenkins.
+To understand and implement Jenkins distributed architecture using **custom-built remoting agents**, enabling remote execution of jobs and pipelines.
 
-### Downloads
+---
 
-Jenkins Remoting libraries are supplied as a part of the Jenkins distributions,
-and it is recommended to use versions from there to ensure compatibility with your Jenkins instance.
-You can download the `${JENKINS_URL}/jnlpJars/agent.jar` from your Jenkins server.
-If you need a specific Remoting version, it can be downloaded from the Jenkins artifact repository.
-Recent artifacts are available [here](https://repo.jenkins-ci.org/webapp/#/artifacts/browse/tree/General/releases/org/jenkins-ci/main/remoting).
+## 🔧 Tools & Technologies
 
-For usage in Docker, the Jenkins project also provides official agent images which bundle Remoting:
-[jenkins/agent](https://hub.docker.com/r/jenkins/agent) and [jenkins/inbound-agent](https://hub.docker.com/r/jenkins/inbound-agent).
-We recommend using and extending these images if you need to run agents in Docker.
+- 🛠️ Jenkins (v2.492.1)
+- ☕ Java 17
+- 📦 Apache Maven
+- 🖥️ VS Code (Extensions: GitLens, Maven for Java, Java Pack)
+- 🐙 Git & GitHub
 
-### Documentation
+---
 
-Remoting documentation is under development.
-More info will appear soon.
-Feel free to contribute.
+## 🧠 Skills Demonstrated
 
-User documentation:
+- Jenkins master-agent architecture
+- Manual inbound agent setup using JNLP
+- Building the Jenkins Remoting project with Maven
+- Command-line based system configuration and troubleshooting
+- Git version control & GitHub repository management
 
-* [Changelog](CHANGELOG.md) - Remoting release notes
-* [Launching inbound agents](docs/inbound-agent.md) - Mechanisms and parameters for launching inbound agents
-* [Remoting Protocols](docs/protocols.md) - Overview of protocols integrated with Jenkins
-* [Remoting Configuration](docs/configuration.md) - Configuring remoting agents
-* [Logging](docs/logging.md) - Logging
-* [Work Directory](docs/workDir.md) - Remoting work directory (new in Remoting `3.8`)
-* [Jenkins Specifics](docs/jenkins-specifics.md) - Notes on using remoting in Jenkins
-* [Troubleshooting](docs/troubleshooting.md) - Investigating and solving common remoting issues
+---
 
-Previous versions:
+## ⚙️ Setup Instructions
 
-* [Changelog - 2.x](CHANGELOG-2.x.md) - Changelog for the Remoting `2.x` stabilization releases
+### 1. Clone the Repository
 
-Developer documentation:
+git clone https://github.com/anitha05762/jenkins-remoting-project.git
+cd jenkins-remoting-project
 
-* [Contributing](CONTRIBUTING.md)
-* [Javadoc](http://javadoc.jenkins.io/component/remoting/)
-* [Channel Termination Process](docs/close.md)
 
-### Reporting issues
+### 2. Build the Project with Maven
+mvn clean install
 
-Remoting library uses the [Jenkins bugtracker](https://issues.jenkins-ci.org).
-Issues should be reported there in the <code>JENKINS</code> project with the <code>remoting</code> component.
 
-See [How to report an issue](https://wiki.jenkins-ci.org/display/JENKINS/How+to+report+an+issue) for more details about Jenkins issue reporting.
+### 3. Download and Connect the Agent via Jenkins
+Go to Manage Jenkins → Nodes → New Node
 
-### More info
+Create a node with: "Launch agent by connecting it to the controller"
+Jenkins will generate a command like this:
+java -jar agent.jar -url http://<your-jenkins-url> -secret <secret> -name <agent-name> -workDir "C:/Users/xidan/jenkins-agent"
+Run the above command in your terminal to connect the agent
 
-* [Remoting Architecture Overview](https://github.com/hudson/www/blob/master/docs/HudsonArch-Remoting.pdf) 
-by Winston Prakash, Oracle (the information is outdated)
-* [Making your plugin behave in distributed Jenkins](https://wiki.jenkins-ci.org/display/JENKINS/Making+your+plugin+behave+in+distributed+Jenkins)
-* [Writing an SCM plugin. Remoting examples](https://wiki.jenkins-ci.org/display/JENKINS/Remoting)
-* [Troubleshooting remoting issues](https://wiki.jenkins-ci.org/display/JENKINS/Remoting+issue)
-* [Scaling Jenkins to Hundreds of Nodes](https://www.youtube.com/watch?v=9-DUVroz7yk) 
-by Akshay Dayal, Google (remoting optimization, JNLP3)
+Jenkins will generate a command like this:
+
+
+java -jar agent.jar -url http://<your-jenkins-url> -secret <secret> -name <agent-name> -workDir "C:/Users/xidan/jenkins-agent"
+Run the above command in your terminal to connect the agent.  
+
+
+### Built By
+
+Anitha Srinithi
+Final Year B.E. CSE (AIML) Student
+LinkedIn : https://www.linkedin.com/in/anitha-srinithi-/
+
+
+### 🔖 Tags
+#DevOps #Jenkins #Java #Maven #VSCode #CI/CD #GitHubProject
+
+
+### 📄 License
+This project is for educational use and learning purposes only.
+© 2025 Anitha Srinithi
+
+
+
