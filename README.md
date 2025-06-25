@@ -34,7 +34,9 @@ To understand and implement Jenkins distributed architecture using **custom-buil
 
 ### 1. Clone the Repository
 
-git clone https://github.com/anitha05762/jenkins-remoting-project.git
+git clone https://github.com/anitha05762/jenkins-remoting-project.git 
+
+
 cd jenkins-remoting-project
 
 
@@ -60,7 +62,11 @@ Run the above command in your terminal to connect the agent.
 ### Built By
 
 Anitha Srinithi
+
+
 Final Year B.E. CSE (AIML) Student
+
+
 LinkedIn : https://www.linkedin.com/in/anitha-srinithi-/
 
 
